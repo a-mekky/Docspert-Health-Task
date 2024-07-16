@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Accounts List</title>
+</head>
+<body>
+    <h1>Accounts</h1>
+    <ul>
+        {% for account in accounts %}
+            <li>
+                <a href="{% url 'accounts:detail' account.account_id %}">
+                    {{ account.account_name }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
